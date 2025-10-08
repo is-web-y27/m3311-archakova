@@ -1,0 +1,137 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #fafafa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(90deg, #222, #5f547e);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px #0000004d;
+}
+
+.header__title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #6039ca;
+    text-decoration: none;
+}
+
+.section {
+    padding: 30px 15%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.section__title {
+    border-left: 5px solid #6039ca;
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.article {
+    margin-bottom: 30px;
+}
+
+.article__title {
+    font-size: 1.3em;
+    color: #222;
+}
+
+.article__image {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.article__image img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.article__image figcaption {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.quote {
+    background-color: #f0f0f0;
+    border-left: 5px solid #6039ca;
+    padding: 15px;
+    font-style: italic;
+    color: #444;
+}
+
+.reviews__list li {
+    margin-bottom: 8px;
+}
+
+pre {
+    background: #222;
+    color : #cebaa8;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.aside {
+    background: #f9f9f9;
+    padding: 20px;
+    border-top: 2px solid 6039ca;
+}
+
+.footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color : #cebaa8;
+    text-decoration: none;
+}
+
+.details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+}
+
+.details p {
+    padding-left: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#news blockquote cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+}
