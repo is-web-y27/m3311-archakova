@@ -5,43 +5,56 @@
     <meta name="keywords" content="музыка, новости, обзоры, концерты, интервью">
     <meta name="description" content="Музыкальные новости и обзоры, анонсы концертов и интервью с музыкантами.">
     <title>Музыкальные Новости</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Mononews</h1>
-        <nav>
-            <ul>
-                <li><a href="#news">Новости</a></li>
-                <li><a href="#reviews">Обзоры</a></li>
-                <li><a href="#events">Концерты</a></li>
-                <li><a href="#about">О нас</a></li>
+    <header class="header">
+        <h1 class="header__title">Mononews</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="#news" class="nav__link">Новости</a></li>
+                <li><a href="#reviews" class="nav__link">Обзоры</a></li>
+                <li><a href="#events" class="nav__link">Концерты</a></li>
+                <li><a href="#about" class="nav__link">О нас</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="news">
-            <h2>Новости</h2>
-            <article>
-                <h3>КУОК(QUOK) - "Imago"</h3>
+        <section id="news" class="section section--news">
+            <h2 class="section__title">Новости</h2>
+            <article class="article">
+                <h3 class="article__title">КУОК (QUOK) — "Imago"</h3>
                 <p><strong>Вышел долгожданный альбом "Imago"</strong> 12.09.2022</p>
-                <blockquote>
-                    <p>В твоём программном коде не было прописано таких строк
-                        Робот не может причинять своим хозяевам боль</p>
+                <figure class="article__image">
+                    <img src="https://i1.sndcdn.com/artworks-twYEFHzDuYev-0-t1080x1080.jpg" alt="Обложка альбома Imago" width="250">
+                    <figcaption>Обложка альбома "Imago" от QUOK</figcaption>
+                </figure>
+                <blockquote class="quote">
+                    <p>В твоём программном коде не было прописано таких строк<br>
+                    Робот не может причинять своим хозяевам боль</p>
                     <cite>— КУОК (QUOK)</cite>
                 </blockquote>
             </article>
-
-            <article>
-                <h3>Интервью </h3>
-                <p>Мы поговорили с Вовой о его новом альбоме.</p>
+            
+            <article class="article">
+                <h3 class="article__title">Интервью</h3>
+                <details class="details">
+                    <summary>Куок — об альбоме «Imago», песне в честь умершего друга и жизни русского в Чехии.</summary>
+                    <p>Владимир Сорокин прошел долгий путь из череды метаморфоз. В середине 2010-х он, еще подростком, делал в Праге электронную музыку под псевдонимом Quok и дружил с Муджусом. К концу десятилетия он резко ушел в рэп и стал чаще бывать в России. Сначала писал биты для «ОУ74», а позже и для более популярных артистов — например, Маркула и Эльдара Джарахова. К концу десятилетия Quok превратился в Куока и сам начал читать рэп, выпустив трилогию «Decadance». Осенью 2020-го вышел альбом «Красность», поделенный пополам на электронику и хип-хоп. Сейчас все эти этапы будто бы слились воедино — Куок стал мультижанровым артистом.
+                        <p>В конце зимы он планировал выпустить большом альбом «Imago». Но события 24 февраля поменяли планы. Куок вышел из ситуации неожиданным образом — выложил альбом в бесплатный доступ. Полноценная премьера на стримингах состоялась только в августе: с несколькими новыми треками и презентацией.</p>
+                        <p>В большом интервью Куок рассказал об альбомах — личных дневниках, преодолении потерь близких людей с помощью творчества, жизни на несколько городов и встрече с пьяным Мадсом Миккельсеном.</p>
+                </details>
             </article>
         </section>
 
-        <section id="reviews">
-            <h2>Обзоры альбомов</h2>
-            <ol>
-                <li>"Imago" — <em><del>старый звук</del></em></li>
+        <section id="reviews" class="section section--reviews">
+            <h2 class="section__title">Обзоры альбомов</h2>
+            <ol class="reviews__list">
+                <li>"Imago" — <em><del>старый звук</del></em>, <i>новое звучание<i></li>
                 <li>"КРАСНОСТЬ" — разговор артиста <ins>с самим собой</ins></li>
             </ol>
             <pre><code>
@@ -51,8 +64,8 @@ playlist.forEach(track => play(track));
             </code></pre>
         </section>
 
-        <aside id="events">
-            <h2>Анонсы концертов</h2>
+        <aside id="events" class="aside">
+            <h2 class="section__title">Анонсы концертов</h2>
             <ul>
                 <li><strong>ATL</strong> — 02.11</li>
                 <li><strong>MollyFest</strong> — 30.09</li>
@@ -61,8 +74,8 @@ playlist.forEach(track => play(track));
         </aside>
     </main>
 
-    <footer id="about">
-        <p>Контакты: mononews@mono.ru</p>
+    <footer id="about" class="footer">
+        <p>Контакты: <a href="mailto:mononews@mono.ru">mononews@mono.ru</a></p>
         <p>&copy; 2025 Mononews</p>
     </footer>
 </body>
