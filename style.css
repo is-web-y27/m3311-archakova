@@ -1,15 +1,26 @@
+:root {
+    --color-bg: #fafafa;
+    --color-text: #222;
+    --color-accent: #6039ca;
+    --color-cream: #cebaa8;
+    --color-light: #ffffff;
+    --color-dark: #555;
+    --color-footer-text: #ccc;
+    --shadow: 0 4px 10px #00000033;
+}
+
 body {
     font-family: "Oswald", sans-serif;
-    background-color: #fafafa;
-    color: #222;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 .header {
-    background: linear-gradient(90deg, #222, #5f547e);
-    color: #ffffff;
+    background: linear-gradient(90deg, var(--color-text), #5f547e);
+    color: var(--color-light);
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 6px #0000004d;
@@ -30,24 +41,25 @@ body {
 }
 
 .nav__link {
-    color: white;
+    color: var(--color-light);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 .nav__link:hover {
-    color: #6039ca;
+    color: var(--color-accent);
     text-decoration: none;
 }
 
 .section {
     padding: 30px 15%;
-    background-color: #fff;
+    background-color: var(--color-light);
     border-bottom: 1px solid #ddd;
 }
+
 .section__title {
-    border-left: 5px solid #6039ca;
+    border-left: 5px solid var(--color-accent);
     padding-left: 10px;
     text-transform: uppercase;
     color: #333;
@@ -58,8 +70,8 @@ body {
 }
 
 .article__title {
-    font-size: 1.3em;
-    color: #222;
+    font-size: 1.3rem;
+    color: var(--color-text);
 }
 
 .article__image {
@@ -68,18 +80,19 @@ body {
 }
 
 .article__image img {
+    width: 250px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow);
 }
 
 .article__image figcaption {
-    font-size: 0.9em;
-    color: #555;
+    font-size: 0.9rem;
+    color: var(--color-dark);
 }
 
 .quote {
     background-color: #f0f0f0;
-    border-left: 5px solid #6039ca;
+    border-left: 5px solid var(--color-accent);
     padding: 15px;
     font-style: italic;
     color: #444;
@@ -90,8 +103,8 @@ body {
 }
 
 pre {
-    background: #222;
-    color : #cebaa8;
+    background: var(--color-dark);
+    color: var(--color-cream);
     padding: 15px;
     border-radius: 8px;
     overflow-x: auto;
@@ -100,19 +113,19 @@ pre {
 .aside {
     background: #f9f9f9;
     padding: 20px;
-    border-top: 2px solid #6039ca;
+    border-top: 2px solid var(--color-accent);
 }
 
 .footer {
-    background-color: #222;
-    color: #ccc;
+    background-color: var(--color-text);
+    color: var(--color-footer-text);
     text-align: center;
     padding: 20px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 .footer a {
-    color : #cebaa8;
+    color: var(--color-cream);
     text-decoration: none;
 }
 
