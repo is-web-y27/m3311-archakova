@@ -1,69 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="музыка, новости, обзоры, концерты, интервью">
-    <meta name="description" content="Музыкальные новости и обзоры, анонсы концертов и интервью с музыкантами.">
-    <title>Музыкальные Новости</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Музыкальные Новости — Mononews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Mononews</h1>
-        <nav>
-            <ul>
-                <li><a href="#news">Новости</a></li>
-                <li><a href="#reviews">Обзоры</a></li>
-                <li><a href="#events">Концерты</a></li>
-                <li><a href="#about">О нас</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <h1 class="header__title">Mononews</h1>
+    <nav class="nav" aria-label="Главная навигация">
+      <ul class="nav__list">
+        <li><a href="/index.html#news" class="nav__link">Новости</a></li>
+        <li><a href="/reviews.html" class="nav__link">Обзоры</a></li>
+        <li><a href="/events.html" class="nav__link">Концерты</a></li>
+        <li><a href="/stats.html" class="nav__link">Статистика</a></li>
+        <li><a href="/about.html" class="nav__link">О нас</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="news">
-            <h2>Новости</h2>
-            <article>
-                <h3>КУОК(QUOK) - "Imago"</h3>
-                <p><strong>Вышел долгожданный альбом "Imago"</strong> 12.09.2022</p>
-                <blockquote>
-                    <p>В твоём программном коде не было прописано таких строк
-                        Робот не может причинять своим хозяевам боль</p>
-                    <cite>— КУОК (QUOK)</cite>
-                </blockquote>
-            </article>
+  <main class="main">
+    <section id="news" class="section section--news">
+      <h2 class="section__title">Новости</h2>
+      <div class="news-grid">
+        <article class="article">
+          <h3 class="article__title">КУОК (QUOK) — "Imago"</h3>
+          <p><strong>Вышел долгожданный альбом "Imago"</strong> 12.09.2022</p>
+          <figure class="article__image">
+            <img src="https://i1.sndcdn.com/artworks-twYEFHzDuYev-0-t1080x1080.jpg" alt="Обложка альбома Imago"/>
+            <figcaption>Обложка альбома "Imago" от QUOK</figcaption>
+          </figure>
+          <blockquote class="quote">
+            <p>В твоём программном коде не было прописано таких строк<br />Робот не может причинять своим хозяевам боль</p>
+            <cite>— КУОК (QUOK)</cite>
+          </blockquote>
+        </article>
 
-            <article>
-                <h3>Интервью </h3>
-                <p>Мы поговорили с Вовой о его новом альбоме.</p>
-            </article>
-        </section>
+        <article class="article">
+          <h3 class="article__title">Интервью</h3>
+          <details class="details">
+            <summary>Куок — об альбоме «Imago», песне в честь умершего друга и жизни русского в Чехии.</summary>
+            <p>Владимир Сорокин прошел долгий путь из череды метаморфоз...</p>
+          </details>
+        </article>
+      </div>
+    </section>
+  </main>
 
-        <section id="reviews">
-            <h2>Обзоры альбомов</h2>
-            <ol>
-                <li>"Imago" — <em><del>старый звук</del></em></li>
-                <li>"КРАСНОСТЬ" — разговор артиста <ins>с самим собой</ins></li>
-            </ol>
-            <pre><code>
-// Пример кода для встраивания плейлиста
-const playlist = ['track1.mp3', 'track2.mp3'];
-playlist.forEach(track => play(track));
-            </code></pre>
-        </section>
+  <div class="banner" role="complementary">Реклама: новые релизы каждую пятницу!</div>
 
-        <aside id="events">
-            <h2>Анонсы концертов</h2>
-            <ul>
-                <li><strong>ATL</strong> — 02.11</li>
-                <li><strong>MollyFest</strong> — 30.09</li>
-                <li><strong>плакса</strong> — 09.12</li>
-            </ul>
-        </aside>
-    </main>
-
-    <footer id="about">
-        <p>Контакты: mononews@mono.ru</p>
-        <p>&copy; 2025 Mononews</p>
-    </footer>
+  <footer id="about" class="footer">
+    <p>Контакты: <a href="mailto:mononews@mono.ru">mononews@mono.ru</a></p>
+    <p>&copy; 2025 Mononews</p>
+  </footer>
 </body>
 </html>
