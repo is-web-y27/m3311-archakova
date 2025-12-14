@@ -107,8 +107,6 @@ body {
     color: #444;
 }
 
-
-
 .reviews__list li {
     margin-bottom: 9px;
 }
@@ -210,6 +208,23 @@ a:hover {
     .article__image img {
         width: 100%;
         max-width: 300px;
+    }
+
+    .header {
+        position: static;
+        top: auto;
+        z-index: auto;
+    }
+
+    .table thead th:nth-child(2),
+    .table tbody td:nth-child(2) {
+        display: none;
+    }
+
+    .table thead tr,
+    .table tbody tr,
+    .table tr {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
