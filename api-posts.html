@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Живая лента — Mononews</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/posts.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Mononews</h1>
+    <nav class="nav" aria-label="Главная навигация">
+      <ul class="nav__list">
+        <li><a href="/index.html#news" class="nav__link">Новости</a></li>
+        <li><a href="/reviews.html" class="nav__link">Обзоры</a></li>
+        <li><a href="/events.html" class="nav__link">Концерты</a></li>
+        <li><a href="/stats.html" class="nav__link">Статистика</a></li>
+        <li><a href="/about.html" class="nav__link">О нас</a></li>
+        <li><a href="/feedback.html" class="nav__link">Обратная связь</a></li>
+        <li><a href="/api-posts.html" class="nav__link">Живая лента</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="live" class="section">
+      <h2 class="section__title">Живая лента постов</h2>
+      <button type="button" id="posts-reload" class="feedback-form__submit posts__reload">
+        Обновить ленту
+      </button>
+
+      <div class="posts">
+
+        <div id="posts-loader" class="posts__loader" aria-hidden="true">
+          <div class="spinner"></div>
+          <span>Загружаем посты...</span>
+        </div>
+
+        <div id="posts-error" class="posts__error" hidden></div>
+
+
+        <div id="posts-list" class="posts__list"></div>
+      </div>
+
+      <template id="post-template">
+        <article class="post">
+          <h3 class="post__title"></h3>
+          <p class="post__body"></p>
+          <p class="post__meta"></p>
+        </article>
+      </template>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Контакты: <a href="mailto:mononews@mono.ru">mononews@mono.ru</a></p>
+    <p>&copy; 2025 Mononews</p>
+  </footer>
+</body>
+</html>
