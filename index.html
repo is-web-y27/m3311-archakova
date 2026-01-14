@@ -1,82 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="музыка, новости, обзоры, концерты, интервью">
-    <meta name="description" content="Музыкальные новости и обзоры, анонсы концертов и интервью с музыкантами.">
-    <title>Музыкальные Новости</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Музыкальные Новости — Mononews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title">Mononews</h1>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li><a href="#news" class="nav__link">Новости</a></li>
-                <li><a href="#reviews" class="nav__link">Обзоры</a></li>
-                <li><a href="#events" class="nav__link">Концерты</a></li>
-                <li><a href="#about" class="nav__link">О нас</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <h1 class="header__title">Mononews</h1>
+    <nav class="nav" aria-label="Главная навигация">
+      <ul class="nav__list">
+        <li><a href="/index.html#news" class="nav__link">Новости</a></li>
+        <li><a href="/reviews.html" class="nav__link">Обзоры</a></li>
+        <li><a href="/events.html" class="nav__link">Концерты</a></li>
+        <li><a href="/stats.html" class="nav__link">Статистика</a></li>
+        <li><a href="/about.html" class="nav__link">О нас</a></li>
+        <li><a href="/feedback.html" class="nav__link">Обратная связь</a></li>
+        <li><a href="/api-posts.html" class="nav__link">Живая лента</a></li>
 
-    <main>
-        <section id="news" class="section section--news">
-            <h2 class="section__title">Новости</h2>
-            <article class="article">
-                <h3 class="article__title">КУОК (QUOK) — "Imago"</h3>
-                <p><strong>Вышел долгожданный альбом "Imago"</strong> 12.09.2022</p>
-                <figure class="article__image">
-                    <img src="https://t2.genius.com/unsafe/385x0/https%3A%2F%2Fimages.genius.com%2Fcfc8d727402e2d58a6ef3fbbfb73d3f7.1000x1000x1.png" alt="Обложка альбома Imago">
-                    <figcaption>Обложка альбома "Imago" от QUOK</figcaption>
-                </figure>
-                <blockquote class="quote">
-                    <p>В твоём программном коде не было прописано таких строк<br>
-                    Робот не может причинять своим хозяевам боль</p>
-                    <cite>— КУОК (QUOK)</cite>
-                </blockquote>
-            </article>
-            
-            <article class="article">
-                <h3 class="article__title">Интервью</h3>
-                <details class="details">
-                    <summary>Куок — об альбоме «Imago», песне в честь умершего друга и жизни русского в Чехии.</summary>
-                    <p>Владимир Сорокин прошел долгий путь из череды метаморфоз. В середине 2010-х он, еще подростком, делал в Праге электронную музыку под псевдонимом Quok и дружил с Муджусом. К концу десятилетия он резко ушел в рэп и стал чаще бывать в России. Сначала писал биты для «ОУ74», а позже и для более популярных артистов — например, Маркула и Эльдара Джарахова. К концу десятилетия Quok превратился в Куока и сам начал читать рэп, выпустив трилогию «Decadance». Осенью 2020-го вышел альбом «Красность», поделенный пополам на электронику и хип-хоп. Сейчас все эти этапы будто бы слились воедино — Куок стал мультижанровым артистом.</p>
-                    <p>В конце зимы он планировал выпустить большом альбом «Imago». Но события 24 февраля поменяли планы. Куок вышел из ситуации неожиданным образом — выложил альбом в бесплатный доступ. Полноценная премьера на стримингах состоялась только в августе: с несколькими новыми треками и презентацией.</p>
-                    <p>В большом интервью Куок рассказал об альбомах — личных дневниках, преодолении потерь близких людей с помощью творчества, жизни на несколько городов и встрече с пьяным Мадсом Миккельсеном.</p>
-                </details>
-            </article>
-        </section>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="reviews" class="section reviews">
-            <h2 class="section__title">Обзоры альбомов</h2>
-            <ol class="reviews__list">
-                <li>"Imago" — <em><del>старый звук</del></em>, <i>новое звучание</i></li>
-                <li>"КРАСНОСТЬ" — разговор артиста <ins>с самим собой</ins></li>
-            </ol>
-            <pre><code>
-// Пример кода для встраивания плейлиста
-const playlist = ['track1.mp3', 'track2.mp3'];
-playlist.forEach(track => play(track));
-            </code></pre>
-        </section>
+  <main class="main">
+    <section id="news" class="section section--news">
+      <h2 class="section__title">Новости</h2>
+      <div class="news-grid">
+        <article class="article">
+          <h3 class="article__title">КУОК (QUOK) — "Imago"</h3>
+          <p><strong>Вышел долгожданный альбом "Imago"</strong> 12.09.2022</p>
+          <figure class="article__image">
+            <img src="https://i1.sndcdn.com/artworks-twYEFHzDuYev-0-t1080x1080.jpg" alt="Обложка альбома Imago"/>
+            <figcaption>Обложка альбома "Imago" от QUOK</figcaption>
+          </figure>
+          <blockquote class="quote">
+            <p>В твоём программном коде не было прописано таких строк<br />Робот не может причинять своим хозяевам боль</p>
+            <cite>— КУОК (QUOK)</cite>
+          </blockquote>
+        </article>
 
-        <aside id="events" class="aside">
-            <h2 class="section__title">Анонсы концертов</h2>
-            <ul>
-                <li><strong>ATL</strong> — 02.11</li>
-                <li><strong>MollyFest</strong> — 30.09</li>
-                <li><strong>плакса</strong> — 09.12</li>
-            </ul>
-        </aside>
-    </main>
+        <article class="article">
+          <h3 class="article__title">Интервью</h3>
+          <details class="details">
+            <summary>Куок — об альбоме «Imago», песне в честь умершего друга и жизни русского в Чехии.</summary>
+            <p>Владимир Сорокин прошел долгий путь из череды метаморфоз...</p>
+          </details>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <footer id="about" class="footer">
-        <p>Контакты: <a href="mailto:mononews@mono.ru">mononews@mono.ru</a></p>
-        <p>&copy; 2025 Mononews</p>
-    </footer>
+  <div class="banner" role="complementary">Реклама: новые релизы каждую пятницу!</div>
+
+  <footer id="about" class="footer">
+    <p>Контакты: <a href="mailto:mononews@mono.ru">mononews@mono.ru</a></p>
+    <p>&copy; 2025 Mononews</p>
+  </footer>
 </body>
 </html>
