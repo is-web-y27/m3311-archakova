@@ -1,6 +1,6 @@
 'use strict';
 
-import { cloneFromTemplate } from "./function";
+import { cloneFromTemplate } from "./function.js";
 
 const API_BASE = 'https://jsonplaceholder.typicode.com';
 
