@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обратная связь — Mononews</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/feedback.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">Mononews</h1>
+    <nav class="nav" aria-label="Главная навигация">
+      <ul class="nav__list">
+        <li><a href="/index.html#news" class="nav__link">Новости</a></li>
+        <li><a href="/reviews.html" class="nav__link">Обзоры</a></li>
+        <li><a href="/events.html" class="nav__link">Концерты</a></li>
+        <li><a href="/stats.html" class="nav__link">Статистика</a></li>
+        <li><a href="/about.html" class="nav__link">О нас</a></li>
+        <li><a href="/feedback.html" class="nav__link">Обратная связь</a></li>
+        <li><a href="/api-posts.html" class="nav__link">Живая лента</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="feedback" class="section">
+      <h2 class="section__title">Обратная связь</h2>
+      <p>Просим вас оставить отзыв о нашем новостном сайте Mononews: что бы вы хотели увидеть здесь нового, что исправить.</p>
+      
+      <form id="feedback-form" class="feedback-form">
+        <div class="feedback-form__group">
+          <label for="feedback-name">Ваше имя</label>
+          <input
+            id="feedback-name"
+            name="name"
+            type="text"
+            required
+            minlength="2"
+            placeholder="Иван"
+          />
+        </div>
+
+        <div class="feedback-form__group">
+          <label for="feedback-email">E-mail</label>
+          <input
+            id="feedback-email"
+            name="email"
+            type="email"
+            required
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div class="feedback-form__group">
+          <label for="feedback-message">Ваш отзыв</label>
+          <textarea
+            id="feedback-message"
+            name="message"
+            required
+            minlength="10"
+            rows="4"
+            placeholder="Напишите, что вы думаете о Mononews"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="feedback-form__submit">
+          Отправить
+        </button>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Отзывы читателей</h2>
+      <div id="feedback-list" class="feedback-list" aria-live="polite"></div>
+
+      <template id="feedback-template">
+        <article class="feedback-item">
+          <header class="feedback-item__header">
+            <h3 class="feedback-item__author"></h3>
+            <span class="feedback-item__email"></span>
+            <span class="feedback-item__date"></span>
+          </header>
+          <p class="feedback-item__text"></p>
+          <button
+            type="button"
+            class="feedback-item__btn"
+            data-action="edit"
+          >
+            Изменить
+          </button>
+        </article>
+      </template>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Контакты: <a href="mailto:mononews@mono.ru">mononews@mono.ru</a></p>
+    <p>&copy; 2025 Mononews</p>
+  </footer>
+</body>
+</html>
