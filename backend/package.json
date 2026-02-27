@@ -7,7 +7,7 @@
     "email": "408172@niuitmo.ru"
   },
   "engines": {
-    "node": "22.22.0"
+    "node": "22.x"
   },
   "private": true,
   "license": "UNLICENSED",
